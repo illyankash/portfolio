@@ -169,7 +169,7 @@ body {
 
 header {
     display: flex;
-    flex-direction: column; /* 子要素を縦方向に並べる */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -186,12 +186,12 @@ header {
     margin-bottom: 2em;
 }
 header h1 {
-    font-size: 2.5em; /* フォントサイズ */
-    text-shadow: 2px 2px 4px #000; /* テキストの影 */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000;
 }
 header p {
     font-size: 1.2em;
-    color: #888888; /* パラグラフのテキストの色 */
+    color: #888888;
 }
 
     footer {
@@ -215,19 +215,18 @@ header p {
     }
 
 .copyright {
-    position: fixed; /* 要素を画面に固定 */
-    top: 0; /* 上端から0pxの位置 */
-    right: 0; /* 右端から0pxの位置 */
-    padding: 10px; /* 内側の余白 */
-    font-size: 12px; /* フォントサイズを小さく */
-    color: #666; /* テキストの色 */
-    z-index: 1000; /* 他の要素より前面に表示 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 12px;
+    color: #666;
+    z-index: 1000;
 }
 
 .introduction {
-    /* 既存のスタイル */
-    filter: blur(8px); /* 初期状態でのブラー効果 */
-    transition: filter 3s ease-out; /* ブラー効果の解除にかかる時間とイージング */
+    filter: blur(8px);
+    transition: filter 3s ease-out;
     text-align: center;
     padding: 2em;
     margin-top: 300px;
@@ -257,75 +256,72 @@ header p {
     z-index: 1000;
 }
 
-/* モーダルウィンドウのスタイル */
 .modal {
-    display: none; /* 最初は非表示 */
-    position: fixed; /* 画面上に固定 */
-    z-index: 1000; /* 他の要素の上に表示 */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* 幅を全体に */
-    height: 100%; /* 高さを全体に */
-    overflow: auto; /* 外部コンテンツがオーバーフローしたらスクロールバーを表示 */
-    background-color: rgba(0,0,0,0.6); /* 背景色（黒）の透明度を下げる */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
   }
   
-  /* モーダルコンテンツのスタイル */
   .modal-content {
     position: relative;
-    background-color: #fff; /* 背景色を白に */
-    margin: 10% auto; /* 上下のマージンを調整 */
-    padding: 20px; /* 内部のパディングを追加 */
-    border-radius: 10px; /* 角を丸く */
-    width: 90%; /* 幅を指定 */
-    max-width: 800px; /* 最大幅を指定 */
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
   }
   
-  /* クローズボタンのスタイル */
   .close {
     position: absolute;
-    top: -10px; /* ボタンの位置を調整 */
-    right: -10px; /* ボタンの位置を調整 */
-    background-color: #f44336; /* 背景色を赤に */
-    color: white; /* 文字色を白に */
-    border-radius: 50%; /* ボタンを円形に */
-    padding: 5px 10px; /* パディングを調整 */
-    cursor: pointer; /* カーソルをポインターに */
-    font-size: 20px; /* フォントサイズを調整 */
+    top: -10px;
+    right: -10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
   }
   
   .close:hover,
   .close:focus {
-    background-color: #d32f2f; /* ホバー時の背景色を濃い赤に */
-    text-decoration: none; /* テキストの下線を消す */
+    background-color: #d32f2f;
+    text-decoration: none;
   }
 
   .modal-body {
-    display: flex; /* フレックスボックスを使用して横並びにする */
-    align-items: center; /* アイテムを中央揃えにする */
-    justify-content: center; /* コンテンツを中央に配置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .modal-text {
-    max-width: 400px; /* または適切な幅に調整 */
+    max-width: 400px;
     padding: 20px;
     font-size: 16px;
-    line-height: 1.6; /* 行間を調整して読みやすくする */
+    line-height: 1.6;
 }
 
 .navigation {
-    position: fixed; /* 画面の左上に固定 */
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* 背景色（半透明） */
-    padding: 10px; /* 余白 */
-    z-index: 1000; /* 他の要素の上に表示 */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    z-index: 1000;
 }
 
 .navigation a {
-    display: inline-block; /* インラインブロック要素として表示 */
-    margin-right: 30px; /* 右の余白 */
-    text-decoration: none; /* 下線を消す */
-    color: #8b8b8b; /* テキスト色 */
-    font-size: 28px; /* フォントサイズ */
+    display: inline-block;
+    margin-right: 30px;
+    text-decoration: none;
+    color: #8b8b8b;
+    font-size: 28px;
 }
