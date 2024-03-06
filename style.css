@@ -1,0 +1,331 @@
+.tight-line-height {
+    line-height: 0.8; /* 行間を小さくする */
+}
+
+@keyframes slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+@keyframes fade-and-drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide {
+    animation: fade-and-drop 0.5s ease-out 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* 画像間の隙間 */
+}
+
+.grid-item {
+    margin-bottom: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    aspect-ratio: 1 / 1;
+}
+
+.grid-item-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.grid-item:hover .grid-item-text {
+    opacity: 1;
+}
+
+.grid-item img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    aspect-ratio: 1 / 1;
+}
+
+.pre-line {
+    white-space: pre-line;
+}
+
+header {
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px 0; 
+}
+
+body {
+    margin: 50px 0 0 0;
+    padding: 0;
+    background-size: cover;
+    animation: slideBg 1s ease-out forwards;
+}
+
+@keyframes slideBg {
+    from {
+        background-position: top;
+    }
+    to {
+        background-position: center;
+    }
+}
+
+.white-frame {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.795);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    opacity: 0;
+    animation: fadeIn 1s 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.item {
+    opacity: 0;
+    animation: slideIn 1s 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #bbbbbb;
+}
+
+.bg-image-1 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/02/take.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-image-2 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/02/rakuten_build@2x.png'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-image-3 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/02/1161539.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-image-4 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/02/ダウンロード.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-image-5 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/03/startup-849804_1280.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-image-6 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/03/office-620822_1280.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-image-7 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/03/entrepreneur-1340649_1280.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.bg-image-8 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://166.news/wp-content/uploads/2024/03/plan-3716541_1280.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+body {
+    font-family: "メイリオ", sans-serif;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 1em;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+header h1 {
+    font-size: 2.5em; /* フォントサイズ */
+    text-shadow: 2px 2px 4px #000; /* テキストの影 */
+}
+header p {
+    font-size: 1.2em;
+    color: #888888; /* パラグラフのテキストの色 */
+}
+
+    footer {
+        text-align: center;
+        padding: 2em;
+        margin-top: 300px;
+    }
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-content img {
+        margin-right: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .footer-text {
+        text-align: left;
+    }
+
+.copyright {
+    position: fixed; /* 要素を画面に固定 */
+    top: 0; /* 上端から0pxの位置 */
+    right: 0; /* 右端から0pxの位置 */
+    padding: 10px; /* 内側の余白 */
+    font-size: 12px; /* フォントサイズを小さく */
+    color: #666; /* テキストの色 */
+    z-index: 1000; /* 他の要素より前面に表示 */
+}
+
+.introduction {
+    /* 既存のスタイル */
+    filter: blur(8px); /* 初期状態でのブラー効果 */
+    transition: filter 3s ease-out; /* ブラー効果の解除にかかる時間とイージング */
+    text-align: center;
+    padding: 2em;
+    margin-top: 300px;
+}
+
+.animated-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.blur-text {
+    filter: blur(8px);
+    transition: filter 3s ease-out;
+}
+
+#popup-message {
+    display: none;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+    display: none; /* 最初は非表示 */
+    position: fixed; /* 画面上に固定 */
+    z-index: 1000; /* 他の要素の上に表示 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 幅を全体に */
+    height: 100%; /* 高さを全体に */
+    overflow: auto; /* 外部コンテンツがオーバーフローしたらスクロールバーを表示 */
+    background-color: rgba(0,0,0,0.6); /* 背景色（黒）の透明度を下げる */
+  }
+  
+  /* モーダルコンテンツのスタイル */
+  .modal-content {
+    position: relative;
+    background-color: #fff; /* 背景色を白に */
+    margin: 10% auto; /* 上下のマージンを調整 */
+    padding: 20px; /* 内部のパディングを追加 */
+    border-radius: 10px; /* 角を丸く */
+    width: 90%; /* 幅を指定 */
+    max-width: 800px; /* 最大幅を指定 */
+  }
+  
+  /* クローズボタンのスタイル */
+  .close {
+    position: absolute;
+    top: -10px; /* ボタンの位置を調整 */
+    right: -10px; /* ボタンの位置を調整 */
+    background-color: #f44336; /* 背景色を赤に */
+    color: white; /* 文字色を白に */
+    border-radius: 50%; /* ボタンを円形に */
+    padding: 5px 10px; /* パディングを調整 */
+    cursor: pointer; /* カーソルをポインターに */
+    font-size: 20px; /* フォントサイズを調整 */
+  }
+  
+  .close:hover,
+  .close:focus {
+    background-color: #d32f2f; /* ホバー時の背景色を濃い赤に */
+    text-decoration: none; /* テキストの下線を消す */
+  }
+
+  .modal-body {
+    display: flex; /* フレックスボックスを使用して横並びにする */
+    align-items: center; /* アイテムを中央揃えにする */
+    justify-content: center; /* コンテンツを中央に配置 */
+  }
+  
+  .modal-text {
+    max-width: 400px; /* または適切な幅に調整 */
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6; /* 行間を調整して読みやすくする */
+}
+
+.navigation {
+    position: fixed; /* 画面の左上に固定 */
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* 背景色（半透明） */
+    padding: 10px; /* 余白 */
+    z-index: 1000; /* 他の要素の上に表示 */
+}
+
+.navigation a {
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin-right: 30px; /* 右の余白 */
+    text-decoration: none; /* 下線を消す */
+    color: #8b8b8b; /* テキスト色 */
+    font-size: 28px; /* フォントサイズ */
+}
