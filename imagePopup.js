@@ -1,3 +1,4 @@
+    <!-- 未使用 -->
 document.addEventListener('DOMContentLoaded', () => {
     const messages = [
         "会社に1人は居てほしい存在",
